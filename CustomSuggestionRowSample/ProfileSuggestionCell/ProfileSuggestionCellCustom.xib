@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rpd-yw-iWr" customClass="ProfileSuggestionCellContentView" customModule="CustomSuggestionRowSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-bD-cTt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uc9-gM-DIO">
+                            <rect key="frame" x="32" y="16" width="350" height="98"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6r-aU-c3C">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="11"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="都道府県を選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-KN-zCD">
+                                            <rect key="frame" x="0.0" y="0.0" width="77" height="11"/>
+                                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
+                                            <color key="textColor" name="146-151-201"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="icon_input_must" translatesAutoresizingMaskIntoConstraints="NO" id="mNU-sz-3qv">
+                                            <rect key="frame" x="83" y="0.0" width="22" height="11"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="ovd-KN-zCD" firstAttribute="leading" secondItem="f6r-aU-c3C" secondAttribute="leading" id="HDR-VN-NvI"/>
+                                        <constraint firstItem="mNU-sz-3qv" firstAttribute="centerY" secondItem="ovd-KN-zCD" secondAttribute="centerY" id="b0L-jO-P6O"/>
+                                        <constraint firstItem="ovd-KN-zCD" firstAttribute="top" secondItem="f6r-aU-c3C" secondAttribute="top" id="dKe-mc-A40"/>
+                                        <constraint firstItem="mNU-sz-3qv" firstAttribute="leading" secondItem="ovd-KN-zCD" secondAttribute="trailing" constant="6" id="lGu-nw-rzP"/>
+                                        <constraint firstAttribute="bottom" secondItem="ovd-KN-zCD" secondAttribute="bottom" id="piS-Bc-r07"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-B6-hlw">
+                                    <rect key="frame" x="0.0" y="11" width="350" height="54"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODa-zb-BBI">
+                                            <rect key="frame" x="0.0" y="8" width="350" height="46"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27H-x1-wNf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="46"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" name="233-234-242"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="都道府県を選択してください" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvU-ZC-4uK">
+                                                    <rect key="frame" x="16" y="0.0" width="334" height="46"/>
+                                                    <color key="textColor" name="20-25-45"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZO-7j-6vG">
+                                                    <rect key="frame" x="304" y="0.0" width="46" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="fZO-7j-6vG" secondAttribute="height" id="a7u-aY-dim"/>
+                                                    </constraints>
+                                                    <state key="normal" image="icon_input_search"/>
+                                                    <state key="disabled" image="icon_input_search_disable"/>
+                                                </button>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5x-R5-XC8">
+                                                    <rect key="frame" x="0.0" y="45.5" width="350" height="0.5"/>
+                                                    <color key="backgroundColor" name="204-204-204"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="QGK-Se-Fwi"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="VvU-ZC-4uK" firstAttribute="leading" secondItem="ODa-zb-BBI" secondAttribute="leading" constant="16" id="1Rl-DM-hDk"/>
+                                                <constraint firstAttribute="trailing" secondItem="VvU-ZC-4uK" secondAttribute="trailing" id="68f-JJ-PAR"/>
+                                                <constraint firstAttribute="height" constant="46" id="D4d-oN-sow"/>
+                                                <constraint firstAttribute="bottom" secondItem="fZO-7j-6vG" secondAttribute="bottom" id="GZU-Rt-TmN"/>
+                                                <constraint firstAttribute="bottom" secondItem="VvU-ZC-4uK" secondAttribute="bottom" id="H2T-Kc-bSX"/>
+                                                <constraint firstItem="VvU-ZC-4uK" firstAttribute="top" secondItem="ODa-zb-BBI" secondAttribute="top" id="K6m-Py-YTW"/>
+                                                <constraint firstItem="J5x-R5-XC8" firstAttribute="leading" secondItem="ODa-zb-BBI" secondAttribute="leading" id="NyC-ks-3BC"/>
+                                                <constraint firstItem="fZO-7j-6vG" firstAttribute="top" secondItem="ODa-zb-BBI" secondAttribute="top" id="PO3-VX-oRC"/>
+                                                <constraint firstItem="27H-x1-wNf" firstAttribute="top" secondItem="ODa-zb-BBI" secondAttribute="top" id="Ply-Dp-uUA"/>
+                                                <constraint firstAttribute="trailing" secondItem="J5x-R5-XC8" secondAttribute="trailing" id="QcG-uj-eaM"/>
+                                                <constraint firstAttribute="trailing" secondItem="fZO-7j-6vG" secondAttribute="trailing" id="e3F-vO-P1X"/>
+                                                <constraint firstAttribute="bottom" secondItem="27H-x1-wNf" secondAttribute="bottom" id="lTH-5d-Hcg"/>
+                                                <constraint firstAttribute="trailing" secondItem="27H-x1-wNf" secondAttribute="trailing" id="ln0-J9-44f"/>
+                                                <constraint firstItem="27H-x1-wNf" firstAttribute="leading" secondItem="ODa-zb-BBI" secondAttribute="leading" id="qhi-Hq-Xi7"/>
+                                                <constraint firstAttribute="bottom" secondItem="J5x-R5-XC8" secondAttribute="bottom" id="v4z-tr-HIW"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ODa-zb-BBI" secondAttribute="bottom" id="CI8-ek-cPK"/>
+                                        <constraint firstItem="ODa-zb-BBI" firstAttribute="top" secondItem="b5f-B6-hlw" secondAttribute="top" constant="8" id="bYV-yH-Jh4"/>
+                                        <constraint firstItem="ODa-zb-BBI" firstAttribute="leading" secondItem="b5f-B6-hlw" secondAttribute="leading" id="l4n-jb-4YQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ODa-zb-BBI" secondAttribute="trailing" id="vo9-tm-RDp"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-tF-8cc">
+                                    <rect key="frame" x="0.0" y="65" width="350" height="33"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNw-R3-9Im">
+                                            <rect key="frame" x="0.0" y="8" width="350" height="25"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="学校名は検索結果から選択してください。検索結果は入力した文字に応じて表示します">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.91764705882352937" green="0.14117647058823529" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="11" name="HiraginoSans-W6"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="KNw-R3-9Im" firstAttribute="leading" secondItem="tJD-tF-8cc" secondAttribute="leading" id="8XX-rJ-rG1"/>
+                                        <constraint firstItem="KNw-R3-9Im" firstAttribute="top" secondItem="tJD-tF-8cc" secondAttribute="top" constant="8" id="AdR-Jp-9D2"/>
+                                        <constraint firstAttribute="bottom" secondItem="KNw-R3-9Im" secondAttribute="bottom" id="LDj-tX-ggf"/>
+                                        <constraint firstAttribute="trailing" secondItem="KNw-R3-9Im" secondAttribute="trailing" id="rrJ-W7-SfQ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Uc9-gM-DIO" firstAttribute="top" secondItem="YNf-bD-cTt" secondAttribute="top" constant="16" id="3pQ-zz-Fpd"/>
+                        <constraint firstItem="Uc9-gM-DIO" firstAttribute="leading" secondItem="YNf-bD-cTt" secondAttribute="leading" constant="32" id="R82-h4-7zu"/>
+                        <constraint firstAttribute="bottom" secondItem="Uc9-gM-DIO" secondAttribute="bottom" constant="8" id="gBY-rl-bmD"/>
+                        <constraint firstAttribute="trailing" secondItem="Uc9-gM-DIO" secondAttribute="trailing" constant="32" id="jq0-fh-Quf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="YNf-bD-cTt" firstAttribute="top" secondItem="Rpd-yw-iWr" secondAttribute="top" id="7Hb-dz-Mak"/>
+                <constraint firstAttribute="trailing" secondItem="YNf-bD-cTt" secondAttribute="trailing" id="YuP-V0-VGo"/>
+                <constraint firstAttribute="bottom" secondItem="YNf-bD-cTt" secondAttribute="bottom" id="aZE-YZ-1El"/>
+                <constraint firstItem="YNf-bD-cTt" firstAttribute="leading" secondItem="Rpd-yw-iWr" secondAttribute="leading" id="sQV-Zu-MbZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="errorContainer" destination="tJD-tF-8cc" id="wLn-3W-n3Y"/>
+                <outlet property="errorLabel" destination="KNw-R3-9Im" id="gA6-BS-sLz"/>
+                <outlet property="requiredView" destination="mNU-sz-3qv" id="6pR-gM-Sv5"/>
+                <outlet property="roundedView" destination="27H-x1-wNf" id="kLl-aE-q4H"/>
+                <outlet property="searchButton" destination="fZO-7j-6vG" id="E4k-7n-rlY"/>
+                <outlet property="separator" destination="J5x-R5-XC8" id="t45-Lp-KVX"/>
+                <outlet property="textField" destination="VvU-ZC-4uK" id="KJt-Aj-Wof"/>
+                <outlet property="titleLabel" destination="ovd-KN-zCD" id="wqQ-rY-0F5"/>
+            </connections>
+            <point key="canvasLocation" x="65.599999999999994" y="-217.69115442278863"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_input_must" width="22" height="11"/>
+        <image name="icon_input_search" width="36" height="36"/>
+        <image name="icon_input_search_disable" width="36" height="36"/>
+        <namedColor name="146-151-201">
+            <color red="0.5725490196078431" green="0.59215686274509804" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="20-25-45">
+            <color red="0.078431372549019607" green="0.098039215686274508" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="204-204-204">
+            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="233-234-242">
+            <color red="0.91399997472763062" green="0.9179999828338623" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

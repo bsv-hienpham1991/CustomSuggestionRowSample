@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SuggestionTableContainer" customModule="CustomSuggestionRowSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOC-Pq-82y">
+                    <rect key="frame" x="32" y="-46" width="350" height="262"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6eA-qR-mf6">
+                            <rect key="frame" x="0.0" y="46" width="350" height="216"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="6eA-qR-mf6" secondAttribute="trailing" id="Q0e-pK-nGy"/>
+                        <constraint firstItem="6eA-qR-mf6" firstAttribute="leading" secondItem="aOC-Pq-82y" secondAttribute="leading" id="XZV-qr-c3w"/>
+                        <constraint firstItem="6eA-qR-mf6" firstAttribute="top" secondItem="aOC-Pq-82y" secondAttribute="top" constant="46" id="cdf-fI-Vmf"/>
+                        <constraint firstAttribute="bottom" secondItem="6eA-qR-mf6" secondAttribute="bottom" id="hGg-26-w5S"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" name="125-95-235"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aOC-Pq-82y" secondAttribute="bottom" id="3xM-lT-7AD"/>
+                <constraint firstAttribute="trailing" secondItem="aOC-Pq-82y" secondAttribute="trailing" constant="32" id="Aen-or-o8T"/>
+                <constraint firstItem="aOC-Pq-82y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-46" id="KM6-Vi-eBo"/>
+                <constraint firstItem="aOC-Pq-82y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="v4z-q1-lTp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="6eA-qR-mf6" id="kwI-WM-5me"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="352.23214285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="125-95-235">
+            <color red="0.49019607843137253" green="0.37254901960784315" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

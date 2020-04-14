@@ -57,11 +57,7 @@ final class ProfileSuggestionCell<T, TableViewCell: UITableViewCell>: Suggestion
         }
         textField.font = originFont
         textField.textColor = originTextColor
-                
-        if let selectedValue = row.value, let options = (row as? RowWithOptions)?.rowOptions as? [T], let index = options.firstIndex(of: selectedValue) {
-            tableView?.selectRow(at: IndexPath(row: index, section: 0), animated: true, scrollPosition: .none)
-        }
-        
+                        
         if row.isDisabled {
             textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)])
             if let unwrapped = bsContentView as? ProfileSuggestionCellContentView {

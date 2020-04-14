@@ -23,7 +23,6 @@
 		0E8BC53524445DA300E0DF93 /* ProfileSuggestionTableContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */; };
 		0E8BC53624445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53224445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib */; };
 		0E8BC53724445DA300E0DF93 /* ProfileSuggestionCellCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellCustom.xib */; };
-		0E8BC5392444632200E0DF93 /* RowWithOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC5382444632200E0DF93 /* RowWithOptions.swift */; };
 		0E8BC53B244467A900E0DF93 /* ProfileSuggestionCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC53A244467A900E0DF93 /* ProfileSuggestionCellContentView.swift */; };
 		2FFD8F646192BFBA2B87DB41 /* Pods_CustomSuggestionRowSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B76BAFCB50CE83CC116C768 /* Pods_CustomSuggestionRowSample.framework */; };
 		60E03350F6F9CA68FE260976 /* Pods_CustomSuggestionRowSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EE7733203D5854C5723B76 /* Pods_CustomSuggestionRowSampleTests.framework */; };
@@ -60,7 +59,6 @@
 		0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionTableContainer.xib; sourceTree = "<group>"; };
 		0E8BC53224445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionTableViewCellContentView.xib; sourceTree = "<group>"; };
 		0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellCustom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionCellCustom.xib; sourceTree = "<group>"; };
-		0E8BC5382444632200E0DF93 /* RowWithOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowWithOptions.swift; sourceTree = "<group>"; };
 		0E8BC53A244467A900E0DF93 /* ProfileSuggestionCellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSuggestionCellContentView.swift; sourceTree = "<group>"; };
 		173E851A7557E4C241E59097 /* Pods-CustomSuggestionRowSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSuggestionRowSample.release.xcconfig"; path = "Target Support Files/Pods-CustomSuggestionRowSample/Pods-CustomSuggestionRowSample.release.xcconfig"; sourceTree = "<group>"; };
 		20EE7733203D5854C5723B76 /* Pods_CustomSuggestionRowSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSuggestionRowSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +148,6 @@
 		0E8BC52F24445DA300E0DF93 /* ProfileSuggestionCell */ = {
 			isa = PBXGroup;
 			children = (
-				0E8BC5382444632200E0DF93 /* RowWithOptions.swift */,
 				0E8BC53024445DA300E0DF93 /* ProfileSuggestionCell.swift */,
 				0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */,
 				0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellCustom.xib */,
@@ -352,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8BC53424445DA300E0DF93 /* ProfileSuggestionCell.swift in Sources */,
-				0E8BC5392444632200E0DF93 /* RowWithOptions.swift in Sources */,
 				0E8BC52D2444292400E0DF93 /* SuggestionTableCustom.swift in Sources */,
 				0E8BC53B244467A900E0DF93 /* ProfileSuggestionCellContentView.swift in Sources */,
 				0E8BC52A2444292400E0DF93 /* SuggestionTableViewCellCustom.swift in Sources */,

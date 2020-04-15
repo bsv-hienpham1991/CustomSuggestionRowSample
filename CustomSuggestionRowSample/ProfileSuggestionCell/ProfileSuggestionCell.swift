@@ -33,7 +33,7 @@ final class ProfileSuggestionCell<T, TableViewCell: UITableViewCell>: Suggestion
                 if contentView.errorContainer.isHidden == true {
                     errorHeight = 0
                 } else {
-                    errorHeight = contentView.errorContainer.systemLayoutSizeFitting(CGSize(width: self.bounds.width, height: UIView.layoutFittingExpandedSize.height), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel).height
+                    errorHeight = contentView.errorContainer.systemLayoutSizeFitting(CGSize(width: self.bounds.width - 64, height: UIView.layoutFittingExpandedSize.height), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel).height
                 }
             } else {
                 errorHeight = 0

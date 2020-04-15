@@ -38,9 +38,9 @@ class ViewController: FormViewController {
         for _ in 0..<15 {
             section
             <<< ProfileSuggestionRow<Scientist>() {row in
-                row.title = "学校名を検索"
+                row.title = "Scientist"
                 row.maxSuggestionRows = 4
-                row.placeholder = "学校名を検索してください"
+                row.placeholder = "Please search the scientist name"
                 row.add(rule: RuleRequired())
                 row.validationOptions = .validatesOnDemand
                 row.filterFunction = { text in

@@ -14,7 +14,7 @@ import SuggestionRow
 class ProfileSuggestionCellContentView: SuggestionCellContentView {
     @IBOutlet weak var separator: UIView!
     @IBOutlet weak var roundedView: UIView!
-    @IBOutlet weak var requiredView: UIImageView!
+    @IBOutlet weak var requiredView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var errorContainer: UIView!
     @IBOutlet weak var errorLabel: UILabel!

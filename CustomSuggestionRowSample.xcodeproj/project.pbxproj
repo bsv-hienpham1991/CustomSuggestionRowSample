@@ -22,8 +22,9 @@
 		0E8BC53424445DA300E0DF93 /* ProfileSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC53024445DA300E0DF93 /* ProfileSuggestionCell.swift */; };
 		0E8BC53524445DA300E0DF93 /* ProfileSuggestionTableContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */; };
 		0E8BC53624445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53224445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib */; };
-		0E8BC53724445DA300E0DF93 /* ProfileSuggestionCellCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellCustom.xib */; };
+		0E8BC53724445DA300E0DF93 /* ProfileSuggestionCellContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellContentView.xib */; };
 		0E8BC53B244467A900E0DF93 /* ProfileSuggestionCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC53A244467A900E0DF93 /* ProfileSuggestionCellContentView.swift */; };
+		0ED0E58F2446A0BD0020E7F5 /* ProfileSuggestionTableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0E58E2446A0BD0020E7F5 /* ProfileSuggestionTableContainer.swift */; };
 		2FFD8F646192BFBA2B87DB41 /* Pods_CustomSuggestionRowSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B76BAFCB50CE83CC116C768 /* Pods_CustomSuggestionRowSample.framework */; };
 		60E03350F6F9CA68FE260976 /* Pods_CustomSuggestionRowSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EE7733203D5854C5723B76 /* Pods_CustomSuggestionRowSampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,8 +59,9 @@
 		0E8BC53024445DA300E0DF93 /* ProfileSuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSuggestionCell.swift; sourceTree = "<group>"; };
 		0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionTableContainer.xib; sourceTree = "<group>"; };
 		0E8BC53224445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionTableViewCellContentView.xib; sourceTree = "<group>"; };
-		0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellCustom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionCellCustom.xib; sourceTree = "<group>"; };
+		0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSuggestionCellContentView.xib; sourceTree = "<group>"; };
 		0E8BC53A244467A900E0DF93 /* ProfileSuggestionCellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSuggestionCellContentView.swift; sourceTree = "<group>"; };
+		0ED0E58E2446A0BD0020E7F5 /* ProfileSuggestionTableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSuggestionTableContainer.swift; sourceTree = "<group>"; };
 		173E851A7557E4C241E59097 /* Pods-CustomSuggestionRowSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSuggestionRowSample.release.xcconfig"; path = "Target Support Files/Pods-CustomSuggestionRowSample/Pods-CustomSuggestionRowSample.release.xcconfig"; sourceTree = "<group>"; };
 		20EE7733203D5854C5723B76 /* Pods_CustomSuggestionRowSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSuggestionRowSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FD328AF018741FA0FFF7F4 /* Pods-CustomSuggestionRowSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSuggestionRowSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomSuggestionRowSampleTests/Pods-CustomSuggestionRowSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,9 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				0E8BC53024445DA300E0DF93 /* ProfileSuggestionCell.swift */,
-				0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */,
-				0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellCustom.xib */,
 				0E8BC53A244467A900E0DF93 /* ProfileSuggestionCellContentView.swift */,
+				0E8BC53324445DA300E0DF93 /* ProfileSuggestionCellContentView.xib */,
+				0ED0E58E2446A0BD0020E7F5 /* ProfileSuggestionTableContainer.swift */,
+				0E8BC53124445DA300E0DF93 /* ProfileSuggestionTableContainer.xib */,
 				0E8BC53224445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib */,
 			);
 			path = ProfileSuggestionCell;
@@ -265,7 +268,7 @@
 				0E8BC50F2444273000E0DF93 /* LaunchScreen.storyboard in Resources */,
 				0E8BC50C2444273000E0DF93 /* Assets.xcassets in Resources */,
 				0E8BC50A2444272C00E0DF93 /* Main.storyboard in Resources */,
-				0E8BC53724445DA300E0DF93 /* ProfileSuggestionCellCustom.xib in Resources */,
+				0E8BC53724445DA300E0DF93 /* ProfileSuggestionCellContentView.xib in Resources */,
 				0E8BC53624445DA300E0DF93 /* ProfileSuggestionTableViewCellContentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +355,7 @@
 				0E8BC52D2444292400E0DF93 /* SuggestionTableCustom.swift in Sources */,
 				0E8BC53B244467A900E0DF93 /* ProfileSuggestionCellContentView.swift in Sources */,
 				0E8BC52A2444292400E0DF93 /* SuggestionTableViewCellCustom.swift in Sources */,
+				0ED0E58F2446A0BD0020E7F5 /* ProfileSuggestionTableContainer.swift in Sources */,
 				0E8BC5072444272C00E0DF93 /* ViewController.swift in Sources */,
 				0E8BC52E2444292400E0DF93 /* ViewProvider.swift in Sources */,
 				0E8BC52B2444292400E0DF93 /* SuggestionCellCustom.swift in Sources */,

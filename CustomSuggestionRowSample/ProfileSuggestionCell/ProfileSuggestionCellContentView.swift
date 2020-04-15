@@ -15,10 +15,10 @@ class ProfileSuggestionCellContentView: SuggestionCellContentView {
     @IBOutlet weak var separator: UIView!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var requiredView: UIImageView!
-    private weak var tableViewContainer: UIView?
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var errorContainer: UIView!
     @IBOutlet weak var errorLabel: UILabel!
+    private weak var tableViewContainer: UIView?
     override func setUp<T, TableViewCell: UITableViewCell>(cell: SuggestionCellCustom<T, TableViewCell>) where TableViewCell: EurekaSuggestionTableViewCell, TableViewCell.S == T {
         super.setUp(cell: cell)
         roundedView.layer.borderColor = UIColor(red: 233.0/255.0, green: 234.0/255.0, blue: 242.0/255.0, alpha: 1).cgColor
@@ -27,7 +27,7 @@ class ProfileSuggestionCellContentView: SuggestionCellContentView {
             tableViewContainer.addObserver(self, forKeyPath: "hidden", options: .init(arrayLiteral: [.old, .new]), context: nil)
         }
     }
-            
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let isHidden: Bool = change?[.newKey] as? Bool {
             if isHidden == true {

@@ -35,6 +35,8 @@ open class SuggestionTableViewCellCustom<T: SuggestionValue>: SuggestionTableVie
     }
     
     open override func setupForValue(_ value: T) {
+        textLabel?.text = value.suggestionString
+        textLabel?.isHidden = (bsContentView?.textLabel != nil)
         bsContentView?.textLabel?.text = value.suggestionString
     }
 }

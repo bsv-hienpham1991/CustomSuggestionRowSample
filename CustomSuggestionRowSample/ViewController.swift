@@ -11,7 +11,7 @@ import Eureka
 import SuggestionRow
 
 class ViewController: FormViewController {
-    var contentInset: UIEdgeInsets = .zero
+    private var contentInset: UIEdgeInsets = .zero
 
     override func viewDidLoad() {
         super.viewDidLoad()

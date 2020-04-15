@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SuggestionTableContainer" customModule="CustomSuggestionRowSample" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileSuggestionTableContainer" customModule="CustomSuggestionRowSample" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -52,6 +52,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="container" destination="aOC-Pq-82y" id="mt0-Vo-gpE"/>
                 <outlet property="tableView" destination="6eA-qR-mf6" id="kwI-WM-5me"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="352.23214285714283"/>

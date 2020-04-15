@@ -43,8 +43,8 @@ class ViewController: FormViewController {
                 row.placeholder = "Please search the scientist name"
                 row.add(rule: RuleRequired())
                 row.validationOptions = .validatesOnDemand
-                row.filterFunction = { text in
-                    users.filter({ $0.firstName.lowercased().contains(text.lowercased()) })
+                row.asyncFilterFunction = { (text, completion) in
+                    completion(users.filter({ $0.firstName.lowercased().contains(text.lowercased()) }))
                 }
             }.cellSetup({ (cell, row) in
                 cell.height = { UITableView.automaticDimension }

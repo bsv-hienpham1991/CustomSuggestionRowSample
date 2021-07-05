@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-CustomSuggestionRowSample/Pods-CustomSuggestionRowSample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SuggestionRow/SuggestionRow.framework

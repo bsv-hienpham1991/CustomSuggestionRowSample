@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				0E8BC5242444292400E0DF93 /* SuggestionInputCell */,
-				0E8BC52F24445DA300E0DF93 /* ProfileSuggestionCell */,
+				0E8BC52F24445DA300E0DF93 /* ScientistSuggestionCell */,
 				0E8BC5022444272C00E0DF93 /* AppDelegate.swift */,
 				0E8BC5042444272C00E0DF93 /* SceneDelegate.swift */,
 				0E8BC5062444272C00E0DF93 /* ViewController.swift */,
@@ -147,7 +147,7 @@
 			path = SuggestionInputCell;
 			sourceTree = "<group>";
 		};
-		0E8BC52F24445DA300E0DF93 /* ProfileSuggestionCell */ = {
+		0E8BC52F24445DA300E0DF93 /* ScientistSuggestionCell */ = {
 			isa = PBXGroup;
 			children = (
 				0E8BC53024445DA300E0DF93 /* ScientistSuggestionCell.swift */,
@@ -157,7 +157,7 @@
 				0E8BC53124445DA300E0DF93 /* ScientistSuggestionTableContainer.xib */,
 				0E8BC53224445DA300E0DF93 /* ScientistSuggestionTableViewCellContentView.xib */,
 			);
-			path = ProfileSuggestionCell;
+			path = ScientistSuggestionCell;
 			sourceTree = "<group>";
 		};
 		F0D14770CB1E2CD18F3E58C3 /* Frameworks */ = {

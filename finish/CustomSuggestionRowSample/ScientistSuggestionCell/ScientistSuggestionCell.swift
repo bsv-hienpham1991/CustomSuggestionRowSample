@@ -63,7 +63,18 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
         textField.textColor = originTextColor
         
         if let unwrapped = bsContentView as? ScientistSuggestionCellContentView {
+            // 1
             unwrapped.errorContainer.isHidden = row.isValid
+            
+            // 2
+            let errorMessages =
+                row.validationErrors.map { error in
+                    return error.msg
+                }
+                .joined(separator: "\n")
+            
+            // 3
+            unwrapped.errorLabel.text = errorMessages
         }
     }
     

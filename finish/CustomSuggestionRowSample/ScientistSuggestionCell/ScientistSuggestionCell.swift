@@ -62,7 +62,7 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
     }
 }
 
-final class ProfileSuggestionRow<T: SuggestionValue>: _SuggestionRowCustom<ScientistSuggestionCell<T, SuggestionTableViewCellCustom<T>>>, RowType {
+final class ScientistSuggestionRow<T: SuggestionValue>: _SuggestionRowCustom<ScientistSuggestionCell<T, SuggestionTableViewCellCustom<T>>>, RowType {
     required public init(tag: String?) {
         super.init(tag: tag)
         

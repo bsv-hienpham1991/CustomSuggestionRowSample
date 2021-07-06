@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E437DD12693049C0014A5C2 /* Scientist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E437DD02693049C0014A5C2 /* Scientist.swift */; };
 		0E8BC5032444272C00E0DF93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC5022444272C00E0DF93 /* AppDelegate.swift */; };
 		0E8BC5052444272C00E0DF93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC5042444272C00E0DF93 /* SceneDelegate.swift */; };
 		0E8BC5072444272C00E0DF93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BC5062444272C00E0DF93 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E437DD02693049C0014A5C2 /* Scientist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scientist.swift; sourceTree = "<group>"; };
 		0E8BC4FF2444272C00E0DF93 /* CustomSuggestionRowSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSuggestionRowSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8BC5022444272C00E0DF93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E8BC5042444272C00E0DF93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				0E8BC5242444292400E0DF93 /* SuggestionInputCell */,
 				0E8BC52F24445DA300E0DF93 /* ScientistSuggestionCell */,
+				0E437DD02693049C0014A5C2 /* Scientist.swift */,
 				0E8BC5022444272C00E0DF93 /* AppDelegate.swift */,
 				0E8BC5042444272C00E0DF93 /* SceneDelegate.swift */,
 				0E8BC5062444272C00E0DF93 /* ViewController.swift */,
@@ -355,6 +358,7 @@
 				0E8BC52D2444292400E0DF93 /* SuggestionTableCustom.swift in Sources */,
 				0E8BC53B244467A900E0DF93 /* ScientistSuggestionCellContentView.swift in Sources */,
 				0E8BC52A2444292400E0DF93 /* SuggestionTableViewCellCustom.swift in Sources */,
+				0E437DD12693049C0014A5C2 /* Scientist.swift in Sources */,
 				0ED0E58F2446A0BD0020E7F5 /* ScientistSuggestionTableContainer.swift in Sources */,
 				0E8BC5072444272C00E0DF93 /* ViewController.swift in Sources */,
 				0E8BC52E2444292400E0DF93 /* ViewProvider.swift in Sources */,

@@ -12,39 +12,44 @@ import SuggestionRow
 
 class ViewController: FormViewController {
     private var contentInset: UIEdgeInsets = .zero
+    
+    let users: [Scientist] = [Scientist(id: 1, firstName: "Albert", lastName: "Einstein"),
+                         Scientist(id: 2, firstName: "Isaac", lastName: "Newton"),
+                         Scientist(id: 3, firstName: "Galileo", lastName: "Galilei"),
+                         Scientist(id: 4, firstName: "Marie", lastName: "Curie"),
+                         Scientist(id: 5, firstName: "Louis", lastName: "Pasteur"),
+                         Scientist(id: 6, firstName: "Michael", lastName: "Faraday"),
+                         Scientist(id: 5, firstName: "Louis", lastName: "Pasteur"),
+                         Scientist(id: 6, firstName: "Marie", lastName: "Curie"),
+                         Scientist(id: 7, firstName: "Thomas", lastName: "Edison"),
+                         Scientist(id: 8, firstName: "Stephen", lastName: "Hawking"),
+                         Scientist(id: 9, firstName: "Alan", lastName: "Turing"),
+                         Scientist(id: 10, firstName: "Leonardo da", lastName: "Vinci"),
+                         Scientist(id: 11, firstName: "Nikolas", lastName: "Tesla"),
+                         Scientist(id: 12, firstName: "Ada", lastName: "Lovelace"),
+                         Scientist(id: 13, firstName: "Richard", lastName: "Feyman"),
+                         Scientist(id: 14, firstName: "Benjamin", lastName: "Franklin"),
+                         Scientist(id: 15, firstName: "James", lastName: "D. Watson")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        let users: [Scientist] = [Scientist(id: 1, firstName: "Albert", lastName: "Einstein"),
-                             Scientist(id: 2, firstName: "Isaac", lastName: "Newton"),
-                             Scientist(id: 3, firstName: "Galileo", lastName: "Galilei"),
-                             Scientist(id: 4, firstName: "Marie", lastName: "Curie"),
-                             Scientist(id: 5, firstName: "Louis", lastName: "Pasteur"),
-                             Scientist(id: 6, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 5, firstName: "Louis", lastName: "Pasteur"),
-                             Scientist(id: 6, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 7, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 8, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 9, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 10, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 11, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 12, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 13, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 14, firstName: "Michael", lastName: "Faraday"),
-                             Scientist(id: 15, firstName: "Michael", lastName: "Faraday")]
-
+        
         let section = Section("Input suggestions")
         for _ in 0..<15 {
             section
-            <<< ProfileSuggestionRow<Scientist>() {row in
+            <<< ScientistSuggestionRow<Scientist>() {row in
                 row.title = "Scientist"
                 row.maxSuggestionRows = 4
                 row.placeholder = "Please search the scientist name"
                 row.add(rule: RuleRequired())
                 row.validationOptions = .validatesOnDemand
-                row.asyncFilterFunction = { (text, completion) in
-                    completion(users.filter({ $0.firstName.lowercased().contains(text.lowercased()) }))
+                row.asyncFilterFunction = {[weak self] (text, completion) in
+                    guard let self = self else {
+                        completion([])
+                        return
+                    }
+                    completion(self.users.filter({ $0.firstName.lowercased().contains(text.lowercased()) }))
                 }
             }.cellSetup({ (cell, row) in
                 cell.height = { UITableView.automaticDimension }
@@ -136,29 +141,4 @@ class ViewController: FormViewController {
         }
         return super.inputAccessoryView(for: row)
     }
-}
-
-struct Scientist: SuggestionValue {
-    var id: Int
-    var firstName: String
-    var lastName: String
-
-
-    var suggestionString: String {
-        return "\(firstName) \(lastName)"
-    }
-
-    init(id: Int, firstName: String, lastName: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.id = id
-    }
-
-    init?(string stringValue: String) {
-        return nil
-    }
-}
-
-func == (lhs: Scientist, rhs: Scientist) -> Bool {
-    return lhs.id == rhs.id
 }

@@ -20,14 +20,6 @@ class SuggestionCellContentView: UIView {
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var textField: UITextField!
     weak var firstResponderDelegate: SuggestionCellContentViewDelegate?
-    
-    func setUp<T, TableViewCell: UITableViewCell>(cell: SuggestionCellCustom<T, TableViewCell>) where TableViewCell: EurekaSuggestionTableViewCell, TableViewCell.S == T {
-        
-    }
-    
-    func update<T, TableViewCell: UITableViewCell>(cell: SuggestionCellCustom<T, TableViewCell>) where TableViewCell: EurekaSuggestionTableViewCell, TableViewCell.S == T {
-        
-    }
 }
 
 open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTableCell<T, TableViewCell> where TableViewCell: EurekaSuggestionTableViewCell, TableViewCell.S == T {
@@ -57,9 +49,7 @@ open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTa
             tableView = unwrapped.tableView
             tableViewContainer = unwrapped
         }
-        
-        bsContentView?.setUp(cell: self)
-                
+                        
         super.setup()
     }
     
@@ -71,6 +61,5 @@ open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTa
         super.update()
         titleLabel?.isHidden = true
         bsContentView?.titleLabel?.text = row.title
-        bsContentView?.update(cell: self)
     }
 }

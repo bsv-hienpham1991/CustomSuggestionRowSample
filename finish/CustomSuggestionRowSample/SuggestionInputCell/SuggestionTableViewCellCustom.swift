@@ -12,7 +12,7 @@ import Eureka
 import SnapKit
 import SuggestionRow
 
-protocol SuggestionHasCustomTableViewCell: class {
+protocol SuggestionHasCustomTableViewCell: AnyObject {
     var tableViewCellContentProvider: ViewProvider<SuggestionTableViewCellContentView>? { get set }
 }
 

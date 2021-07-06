@@ -43,6 +43,12 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
         suggestionTableViewCellHeight = { (indexPath) in
             return 46
         }
+        
+        if let contentView = bsContentView as? ScientistSuggestionCellContentView {
+            contentView.roundedView.layer.borderColor = UIColor(red: 233.0/255.0, green: 234.0/255.0, blue: 242.0/255.0, alpha: 1).cgColor
+        }
+        
+        tableViewContainer?.addObserver(self, forKeyPath: "hidden", options: .init(arrayLiteral: [.old, .new]), context: nil)
     }
     
     override func update() {
@@ -59,6 +65,25 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
         if let unwrapped = bsContentView as? ScientistSuggestionCellContentView {
             unwrapped.errorContainer.isHidden = row.isValid
         }
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        guard let observedTableView = object as? UITableView, observedTableView == tableViewContainer,
+              let contentView = bsContentView as? ScientistSuggestionCellContentView else { return }
+              
+        if let isHidden: Bool = change?[.newKey] as? Bool {
+            if isHidden == true {
+                contentView.separator.isHidden = true
+                contentView.roundedView.isHidden = false
+            } else {
+                contentView.separator.isHidden = false
+                contentView.roundedView.isHidden = true
+            }
+        }
+    }
+    
+    deinit {
+        tableViewContainer?.removeObserver(self, forKeyPath: "hidden")
     }
 }
 

@@ -43,7 +43,6 @@ class ViewController: FormViewController {
                 row.maxSuggestionRows = 4
                 row.placeholder = "Please search the scientist name"
                 row.add(rule: RuleRequired())
-                row.validationOptions = .validatesOnDemand
                 row.asyncFilterFunction = {[weak self] (text, completion) in
                     guard let self = self else {
                         completion([])
@@ -53,11 +52,6 @@ class ViewController: FormViewController {
                 }
             }.cellSetup({ (cell, row) in
                 cell.height = { UITableView.automaticDimension }
-            })
-            .onCellHighlightChanged({ (cell, row) in
-                if cell.textField.isEditing == false {
-                    row.validate()
-                }
             })
             .onRowValidationChanged({ (cell, row) in
                 UIView.performWithoutAnimation { [weak self] in

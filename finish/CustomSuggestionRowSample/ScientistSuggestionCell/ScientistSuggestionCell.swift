@@ -17,6 +17,7 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
     var originTextAlignment: NSTextAlignment?
     var originFont: UIFont?
     var originTextColor: UIColor?
+    var token: NSKeyValueObservation?
     
     override func setup() {
         super.setup()
@@ -29,7 +30,7 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
         suggestionViewYOffset = { [weak self] in
             guard let self = self else { return -8 }
             let errorHeight: CGFloat
-            if let contentView = self.bsContentView as? ScientistSuggestionCellContentView {
+            if let contentView = self.customContentView as? ScientistSuggestionCellContentView {
                 if contentView.errorContainer.isHidden == true {
                     errorHeight = 0
                 } else {
@@ -44,11 +45,16 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
             return 46
         }
         
-        if let contentView = bsContentView as? ScientistSuggestionCellContentView {
+        if let contentView = customContentView as? ScientistSuggestionCellContentView {
             contentView.roundedView.layer.borderColor = UIColor(red: 233.0/255.0, green: 234.0/255.0, blue: 242.0/255.0, alpha: 1).cgColor
         }
         
-        tableViewContainer?.addObserver(self, forKeyPath: "hidden", options: .init(arrayLiteral: [.old, .new]), context: nil)
+        token = tableViewContainer?.observe(\UIView.isHidden, options: .new, changeHandler: { [weak self] tableViewContainer, change in
+            guard let contentView = self?.customContentView as? ScientistSuggestionCellContentView,
+                  let isHidden = change.newValue else { return }
+            contentView.separator.isHidden = isHidden
+            contentView.roundedView.isHidden = !isHidden
+        })
     }
     
     override func update() {
@@ -62,7 +68,7 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
         textField.font = originFont
         textField.textColor = originTextColor
         
-        if let unwrapped = bsContentView as? ScientistSuggestionCellContentView {
+        if let unwrapped = customContentView as? ScientistSuggestionCellContentView {
             // 1
             unwrapped.errorContainer.isHidden = row.isValid
             
@@ -76,25 +82,6 @@ final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: Suggesti
             // 3
             unwrapped.errorLabel.text = errorMessages
         }
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        guard let observedTableView = object as? UITableView, observedTableView == tableViewContainer,
-              let contentView = bsContentView as? ScientistSuggestionCellContentView else { return }
-              
-        if let isHidden: Bool = change?[.newKey] as? Bool {
-            if isHidden == true {
-                contentView.separator.isHidden = true
-                contentView.roundedView.isHidden = false
-            } else {
-                contentView.separator.isHidden = false
-                contentView.roundedView.isHidden = true
-            }
-        }
-    }
-    
-    deinit {
-        tableViewContainer?.removeObserver(self, forKeyPath: "hidden")
     }
 }
 

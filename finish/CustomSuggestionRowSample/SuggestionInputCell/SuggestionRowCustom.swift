@@ -12,16 +12,6 @@ import Eureka
 import SnapKit
 import SuggestionRow
 
-protocol SuggestionCellContentViewDelegate: class {
-    func suggestionCellContentViewBecomeFirstRersponder(_ suggestionCellContentView: SuggestionCellContentView)
-}
-
-extension SuggestionCellCustom: SuggestionCellContentViewDelegate {
-    func suggestionCellContentViewBecomeFirstRersponder(_ suggestionCellContentView: SuggestionCellContentView) {
-        cellBecomeFirstResponder(withDirection: .down)
-    }
-}
-
 open class _SuggestionRowCustom<Cell: CellType> : _SuggestionRow<Cell>,
     SuggestionHasCustomContentView,
     SuggestionHasCustomTableView,

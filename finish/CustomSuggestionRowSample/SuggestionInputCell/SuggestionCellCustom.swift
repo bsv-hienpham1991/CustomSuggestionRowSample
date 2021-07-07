@@ -12,40 +12,38 @@ import Eureka
 import SnapKit
 import SuggestionRow
 
-protocol SuggestionHasCustomContentView: class {
+protocol SuggestionHasCustomContentView: AnyObject {
     var contentViewProvider: ViewProvider<SuggestionCellContentView>? { get set }
 }
 
 class SuggestionCellContentView: UIView {
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var textField: UITextField!
-    weak var firstResponderDelegate: SuggestionCellContentViewDelegate?
 }
 
 open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTableCell<T, TableViewCell> where TableViewCell: EurekaSuggestionTableViewCell, TableViewCell.S == T {
-    var bsContentView: SuggestionCellContentView?
-    var bsTableContainer: SuggestionTableContainer?
+    var customContentView: SuggestionCellContentView?
+    var tableContainer: SuggestionTableContainer?
     
     fileprivate var suggsetionRowCustom: SuggestionHasCustomContentView? { return row as? SuggestionHasCustomContentView }
 
     open override func setup() {
-        bsContentView = suggsetionRowCustom?.contentViewProvider?.makeView()
-        if let unwrapped = bsContentView {
+        customContentView = suggsetionRowCustom?.contentViewProvider?.makeView()
+        if let unwrapped = customContentView {
             contentView.addSubview(unwrapped)
             unwrapped.snp.makeConstraints { (make) in
                 make.edges.equalToSuperview()
             }
         }
-        bsContentView?.firstResponderDelegate = self
                 
-        if bsContentView != nil {
+        if customContentView != nil {
             textField.snp.removeConstraints()
             textField.removeFromSuperview()
-            textField = bsContentView?.textField
+            textField = customContentView?.textField
         }
         
-        bsTableContainer = (row as? SuggestionHasCustomTableView)?.tableViewProvider?.makeView()
-        if let unwrapped = bsTableContainer {
+        tableContainer = (row as? SuggestionHasCustomTableView)?.tableViewProvider?.makeView()
+        if let unwrapped = tableContainer {
             tableView = unwrapped.tableView
             tableViewContainer = unwrapped
         }
@@ -60,6 +58,6 @@ open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTa
     open override func update() {
         super.update()
         titleLabel?.isHidden = true
-        bsContentView?.titleLabel?.text = row.title
+        customContentView?.titleLabel?.text = row.title
     }
 }

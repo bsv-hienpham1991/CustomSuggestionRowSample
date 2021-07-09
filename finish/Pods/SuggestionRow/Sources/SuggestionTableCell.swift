@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Eureka
 
-public protocol BaseSuggestionTableCellType: class {
+public protocol BaseSuggestionTableCellType: AnyObject {
     var suggestionViewYOffset: (() -> CGFloat)? { get set }
     var tableView: UITableView? { get set }
     var tableViewContainer: UIView? { get set }

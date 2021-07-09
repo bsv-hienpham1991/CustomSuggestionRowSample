@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SuggestionRow:
-    :commit: ebac923bd7abf3e0b59d2a6dc5f8b0454160ca71
+    :commit: e699047b1d885410932889df8d2f02b67da2f30a
     :git: https://github.com/bsv-hienpham1991/SuggestionRow.git
 
 SPEC CHECKSUMS:

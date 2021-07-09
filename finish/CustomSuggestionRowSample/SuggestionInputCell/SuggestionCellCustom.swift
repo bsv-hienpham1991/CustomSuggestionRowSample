@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Eureka
-import SnapKit
 import SuggestionRow
 
 protocol SuggestionHasCustomContentView: AnyObject {
@@ -31,9 +30,10 @@ open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTa
         customContentView = suggsetionRowCustom?.contentViewProvider?.makeView()
         if let unwrapped = customContentView {
             contentView.addSubview(unwrapped)
-            unwrapped.snp.makeConstraints { (make) in
-                make.edges.equalToSuperview()
-            }
+            unwrapped.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+            unwrapped.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+            unwrapped.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+            unwrapped.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         }
                 
         if customContentView != nil {

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Eureka
-import SnapKit
 import SuggestionRow
 
 protocol SuggestionHasCustomTableViewCell: AnyObject {
@@ -27,9 +26,11 @@ open class SuggestionTableViewCellCustom<T: SuggestionValue>: SuggestionTableVie
         bsContentView = row.tableViewCellContentProvider?.makeView()
         if let unwrapped = bsContentView {
             contentView.addSubview(unwrapped)
-            unwrapped.snp.makeConstraints { (make) in
-                make.edges.equalToSuperview()
-            }
+            unwrapped.translatesAutoresizingMaskIntoConstraints = false
+            unwrapped.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+            unwrapped.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+            unwrapped.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+            unwrapped.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
             textLabel?.removeFromSuperview()
         }
     }

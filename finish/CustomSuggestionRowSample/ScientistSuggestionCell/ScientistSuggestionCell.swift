@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Eureka
-import SnapKit
 import SuggestionRow
 
 final class ScientistSuggestionCell<T, TableViewCell: UITableViewCell>: SuggestionCellCustom<T, TableViewCell> where TableViewCell: EurekaSuggestionTableViewCell, TableViewCell.S == T {

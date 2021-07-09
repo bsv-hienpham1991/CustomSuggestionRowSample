@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 import Eureka
-import SnapKit
 import SuggestionRow
 
-protocol SuggestionHasCustomTableView: class {
+protocol SuggestionHasCustomTableView: AnyObject {
     var tableViewProvider: ViewProvider<SuggestionTableContainer>? { get set }
 }
 

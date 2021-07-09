@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Eureka
-import SnapKit
 import SuggestionRow
 
 open class _SuggestionRowCustom<Cell: CellType> : _SuggestionRow<Cell>,

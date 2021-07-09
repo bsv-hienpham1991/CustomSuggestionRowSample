@@ -30,6 +30,7 @@ open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTa
         customContentView = suggsetionRowCustom?.contentViewProvider?.makeView()
         if let unwrapped = customContentView {
             contentView.addSubview(unwrapped)
+            unwrapped.translatesAutoresizingMaskIntoConstraints = false
             unwrapped.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
             unwrapped.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
             unwrapped.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
@@ -37,7 +38,6 @@ open class SuggestionCellCustom<T, TableViewCell: UITableViewCell>: SuggestionTa
         }
                 
         if customContentView != nil {
-            textField.snp.removeConstraints()
             textField.removeFromSuperview()
             textField = customContentView?.textField
         }
